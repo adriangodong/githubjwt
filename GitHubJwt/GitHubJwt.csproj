@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Title>GitHubJwt</Title>
+    <Description>A helper library to generate GitHub JWT from GitHub Apps private key</Description>
+    <Authors>adrian</Authors>
+    <AssemblyName>GitHubJwt</AssemblyName>
+    <PackageId>GitHubJwt</PackageId>
+    <PackageTags>github;jwt</PackageTags>
+    <IncludeSymbols>True</IncludeSymbols>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>0.0.0</Version>
+    <PackageProjectUrl>https://github.com/adriangodong/githubjwt</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/adriangodong/githubjwt/blob/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BouncyCastle.NetCore" Version="1.8.1.3" />
+    <PackageReference Include="jose-jwt" Version="2.4.0" />
+  </ItemGroup>
+
+</Project>
