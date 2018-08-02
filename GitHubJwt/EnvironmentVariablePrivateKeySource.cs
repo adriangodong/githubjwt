@@ -9,6 +9,11 @@ namespace GitHubJwt
 
         public EnvironmentVariablePrivateKeySource(string environmentVariableName)
         {
+            if (string.IsNullOrEmpty(environmentVariableName))
+            {
+                throw new ArgumentNullException(nameof(environmentVariableName));
+            }
+
             this.environmentVariableName = environmentVariableName;
         }
 
