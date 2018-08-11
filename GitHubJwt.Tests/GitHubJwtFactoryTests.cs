@@ -55,5 +55,25 @@ namespace GitHubJwt.Tests
             }
         }
 
+        [TestMethod]
+        public void CreateEncodedJwtToken_FromString_ShouldNotFail()
+        {
+            // Arrange
+            var privateKeySource = new StringPrivateKeySource(File.ReadAllText("envvar.pem"));
+            var options = new GitHubJwtFactoryOptions
+            {
+                AppIntegrationId = 6837,
+                ExpirationSeconds = 600 // 10 minutes maximum
+            };
+            var factory = new GitHubJwtFactory(privateKeySource, options);
+
+            // Act
+            var token = factory.CreateEncodedJwtToken();
+
+            // Assert
+            Assert.IsNotNull(token);
+            Console.WriteLine(token);
+        }
+
     }
 }
