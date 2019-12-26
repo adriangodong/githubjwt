@@ -11,11 +11,11 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>0.0.0</Version>
     <PackageProjectUrl>https://github.com/adriangodong/githubjwt</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/adriangodong/githubjwt/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.4</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
