@@ -2,6 +2,8 @@
 
 A helper library to generate GitHub JWT from GitHub Apps private key.
 
+See [note for usage example](https://octokitnet.readthedocs.io/en/latest/github-apps/#additional-notes).
+
 [![Build status](https://ci.appveyor.com/api/projects/status/58svorf4e8ayx7pw/branch/master?svg=true)](https://ci.appveyor.com/project/adriangodong/githubjwt/branch/master)
 [![NuGet](https://img.shields.io/nuget/v/GitHubJwt.svg)](https://www.nuget.org/packages/GitHubJwt/)
 
