@@ -21,9 +21,9 @@ namespace GitHubJwt
             this.options = options;
         }
 
-        public string CreateEncodedJwtToken()
+        public string CreateEncodedJwtToken(int iatOffset = 0)
         {
-            var utcNow = DateTime.UtcNow;
+            var utcNow = DateTime.UtcNow.AddSeconds(iatOffset);
 
             var payload = new Dictionary<string, object>
             {

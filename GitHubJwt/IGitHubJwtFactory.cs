@@ -2,6 +2,6 @@
 {
     public interface IGitHubJwtFactory
     {
-        string CreateEncodedJwtToken();
+        string CreateEncodedJwtToken(int iatOffset = 0);
     }
 }
