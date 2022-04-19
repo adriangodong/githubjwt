@@ -2,6 +2,6 @@
 {
     public interface IGitHubJwtFactory
     {
-        string CreateEncodedJwtToken(int iatOffset = 0);
+        string CreateEncodedJwtToken(System.TimeSpan? iatOffset = null);
     }
 }
