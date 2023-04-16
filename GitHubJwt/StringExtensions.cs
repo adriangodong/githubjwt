@@ -6,11 +6,16 @@ namespace GitHubJwt
     {
         public static string HydrateRsaVariable(this string input)
         {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.AppendLine("-----BEGIN RSA PRIVATE KEY-----");
-            stringBuilder.AppendLine(input);
-            stringBuilder.AppendLine("-----END RSA PRIVATE KEY-----");
-            return stringBuilder.ToString();
+            if (!input.StartsWith("-----BEGIN RSA PRIVATE KEY-----"))
+            {
+                StringBuilder stringBuilder = new StringBuilder();
+                stringBuilder.AppendLine("-----BEGIN RSA PRIVATE KEY-----");
+                stringBuilder.AppendLine(input);
+                stringBuilder.AppendLine("-----END RSA PRIVATE KEY-----");
+                return stringBuilder.ToString();
+            }
+
+            return input;
         }
     }
 }
